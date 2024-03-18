@@ -10,7 +10,7 @@ def s_meaning(meaning):
     return meaning
 
 def analyzer(keyword, a_type):
-    with open('./data/knowledge_base.json', 'r', encoding="utf8") as file:
+    with open('knowledge_base.json', 'r', encoding="utf8") as file:
         knowledge_base: dict = json_stream.load(file)
 
         for item in knowledge_base["data"]:
