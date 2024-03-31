@@ -1,6 +1,7 @@
 # checkdata.py
 import json_stream
 from random import randint as ra
+from ac import Gss
 
 p = print
 
@@ -26,13 +27,15 @@ def analyzer(keyword, a_type):
 
 def define(keyword):
     try:
-        meaning = analyzer(keyword, 'keyword')
+        #meaning = analyzer(keyword, 'keyword')
+        meaning = Gss(keyword)
         if meaning:
             return meaning
         else:
-            meaning = analyzer(keyword, 'answer')
-            if meaning:
-                return meaning
+            #meaning = analyzer(keyword, 'answer')
+            #if meaning:
+                #return meaning
+            return "Can't find that but it'll be added soon"
  
  
     except Exception as e:
